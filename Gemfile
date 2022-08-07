@@ -73,3 +73,5 @@ end
 
 gem 'haml'
 gem 'haml-rails'
+
+gem "minitest-reporters"
