@@ -5,12 +5,22 @@ class UserTest < ActiveSupport::TestCase
     @user = User.new(name: "Alice", email: "alice@gmail.com")
   end
 
-  test "should be valid" do
+  test "正常なユーザーを作ることができる" do
     assert @user.valid?
   end
 
-  test "name should be present" do
+  test "nameはpresentである" do
     @user.name = "     "
+    assert_not @user.valid?
+  end
+
+  test "emailはpresentである" do
+    @user.email = "   "
+    assert_not @user.valid?
+  end
+
+  test "emailは長すぎない" do
+    @user.email = "a" * 246 + "@gmail.com"
     assert_not @user.valid?
   end
 end
