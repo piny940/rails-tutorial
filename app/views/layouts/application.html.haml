@@ -15,8 +15,10 @@
           = link_to "sample app", "#", class: "navbar-brand"
           .navbar-nav.collapse.navbar-collapse
             .nav-item
-              = link_to "Home", static_pages_home_url, class: "active nav-link"
+              = link_to "Home", static_pages_home_path, class: "active nav-link"
             .nav-item
-              = link_to "Help", static_pages_help_url, class: "active nav-link"
+              = link_to "Help", static_pages_help_path, class: "active nav-link"
+            .nav-item
+              = link_to "About", static_pages_about_path, class: "active nav-link"
 
     = yield
