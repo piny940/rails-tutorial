@@ -1,12 +1,11 @@
-.container
-  %h1
-    Home
-  %button.btn.btn-primary.m-2{:type => "button", "data-bs-toggle" => "collapse", "data-bs-target" => "#collapseExample", "aria-expanded" => "false", "aria-controls" => "collapseExample"}
-    Button with data-bs-target
-  .collapse#collapseExample
-    .card.card-body
-      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-  .image.mt-3
-    = link_to image_tag("rails-logo.svg", width: "200px"), "https://rubyonrails.org/"
-  .mt-3
-    = link_to "アカウント作成", signup_path, class: "btn btn-primary"
+%h1
+  Home
+%button.btn.btn-primary.m-2{:type => "button", "data-bs-toggle" => "collapse", "data-bs-target" => "#collapseExample", "aria-expanded" => "false", "aria-controls" => "collapseExample"}
+  Button with data-bs-target
+.collapse#collapseExample
+  .card.card-body
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+.image.mt-3
+  = link_to image_tag("rails-logo.svg", width: "200px"), "https://rubyonrails.org/"
+.mt-3
+  = link_to "アカウント作成", signup_path, class: "btn btn-primary"
