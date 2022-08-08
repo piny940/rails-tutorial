@@ -77,3 +77,4 @@ gem 'haml-rails'
 gem "minitest-reporters"
 gem "shakapacker", "= 6.5"
 gem 'rails-controller-testing'
+gem 'bcrypt'
