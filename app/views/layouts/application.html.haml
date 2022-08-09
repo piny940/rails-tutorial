@@ -21,11 +21,11 @@
             .nav-item
               = link_to "About", static_pages_about_path, class: "active nav-link"
 
-    .container.mt-3
+    .container.mt-3.w-75
       - if alert
         .alert.alert-danger= alert
       - if notice
-        .alert.alert-info= notice
+        .alert.alert-success= notice
       = yield
 
     .card.w-75.mx-auto.mt-3.bg-light

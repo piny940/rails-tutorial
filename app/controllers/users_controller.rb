@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      login(@user)
       redirect_to root_path, notice: "ユーザーが作成されました。"
     else
       render :new
