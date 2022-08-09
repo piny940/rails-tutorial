@@ -1,4 +1,23 @@
 - provide :title, "Sign up"
 
-%h1 Users#new
-%p Find me in app/views/users/new.html.haml
+%h1 ユーザー作成
+= form_with(model: @user, local: true, class: "w-75 mx-auto my-3") do |form|
+  .form-group.row.m-2
+    %label.form-label.col-md-4.fw-bold{for: "username-input"} ユーザー名
+    .col-md-8
+      = form.text_field :name, class: "form-control", id: "username-input"
+  .form-group.row.m-2
+    %label.form-label.col-md-4.fw-bold{for: "email-input"} メールアドレス
+    .col-md-8
+      = form.email_field :email, class: "form-control", id: "email-input"
+  .form-group.row.m-2
+    %label.form-label.col-md-4.fw-bold{for: "password-input"} パスワード
+    .col-md-8
+      = form.password_field :password, class: "form-control", id: "password-input"
+  .form-group.row.m-2
+    %label.form-label.col-md-4.fw-bold{for: "password-confirmation-input"} パスワード(確認用)
+    .col-md-8
+      = form.password_field :password_confirmation, class: "form-control", id: "password-confirmation-input"
+  .row
+    = form.submit "送信", class: "btn btn-primary col-3 offset-md-9"
+  
