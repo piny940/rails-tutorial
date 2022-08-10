@@ -11,7 +11,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login(@user)
-      redirect_to root_path, notice: "ユーザーが作成されました。"
+      UserMailer.account_activation(@user).deliver_now
+      redirect_to root_path, notice: "Please check your email to activate your account."
     else
       render :new
     end
