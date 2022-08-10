@@ -11,6 +11,12 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
   has_secure_password
 
+  def proper_token?(activation_token)
+    return false if activation_digest.nil?
+
+    BCrypt::Password.new(activation_digest).is_password?(activation_token)
+  end
+
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
