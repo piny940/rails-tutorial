@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
         redirect_to root_path, notice: "ログインしました。"
       else
         redirect_to root_path, alert: "アカウントを有効化してください。"
+      end
     else
       redirect_to login_path, alert: "メールアドレスまたはパスワードが違います。"
     end
