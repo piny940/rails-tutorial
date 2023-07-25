@@ -77,3 +77,5 @@ gem 'haml-rails'
 gem "minitest-reporters"
 gem 'rails-controller-testing'
 gem 'bcrypt'
+
+gem 'bootstrap', '~> 5.3.0.alpha3'
