@@ -16,7 +16,7 @@ gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-# gem "importmap-rails"
+gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 # gem "turbo-rails"
@@ -75,6 +75,7 @@ gem 'haml'
 gem 'haml-rails'
 
 gem "minitest-reporters"
-gem "shakapacker", "= 6.5"
 gem 'rails-controller-testing'
 gem 'bcrypt'
+
+gem 'bootstrap', '~> 5.3.0.alpha3'
